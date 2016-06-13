@@ -125,11 +125,6 @@
         </section>
 
         <section>
-          <h2>Sponsors</h2>
-          <img width="300" class="nostyle" alt="nodeschool madison" src="images/earthling_logo.png" />
-        </section>
-
-        <section>
           <h2>What is NodeSchool?</h2>
           <ul>
             <li class="fragment fade-in">Community driven/Open Source<br/><br/></li>
@@ -159,20 +154,22 @@
         <section>
           <h2>What is a Closure?</h2>
           <ul>
-		    <li class="fragment fade-in">A closure is an inner function that has access to the outer (enclosing) function’s variables—scope chain. The closure has three scope chains: it has access to its own scope (variables defined between its curly brackets), it has access to the outer function’s variables, and it has access to the global variables.<br/> - javascriptissexy.com</li>
+				  <li class="fragment fade-in"><small>A closure is an inner function that has access to the outer (enclosing) function’s variables—scope chain. The closure has three scope chains: it has access to its own scope (variables defined between its curly brackets), it has access to the outer function’s variables, and it has access to the global variables. - <i>javascriptissexy.com</i></small><br/></li>
             <li class="fragment fade-in">
-<pre>
-<code>
-function getCounter() {
+<pre><code>function getCounter() {
   var counterValue = 0;
+
   function increment() {
     counterValue += 1;
     return counterValue;
   }
+
   return increment;
 }
-</code>
-</pre>
+
+var myCounter = getCounter();
+myCounter(); // 1
+myCounter(); // 2</code></pre>
 			</li>
           </ul>
         </section>
@@ -180,19 +177,15 @@ function getCounter() {
         <section>
           <h2>What is a Promise?</h2>
           <ul>
-            <li class="fragment fade-in">The Promise object is used for asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future. - Mozilla developer network<br/></li>
+				  <li class="fragment fade-in"><small>The Promise object is used for asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future. - <i>Mozilla developer network</i><br/></small></li>
             <li class="fragment fade-in">
-<pre>
-<code>
-fetch('https://api.twitter.com/1.1/statuses/show.json?id=210462857140252672')
+<pre><code>fetch('/statuses/show.json?id=2104') // Returns a Promise
 .then(function() {
   console.log('Success!');
 })
 .catch(function(error) {
   console.error('Something is broken');
-});
-</code>
-</pre>
+});</code></pre>
 			</li>
           </ul>
         </section>
